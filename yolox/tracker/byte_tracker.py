@@ -2,13 +2,11 @@ import numpy as np
 from collections import deque
 import os
 import os.path as osp
-import copy
-import torch
 import torch.nn.functional as F
 
-from .kalman_filter import KalmanFilter
-from yolox.tracker import matching
-from .basetrack import BaseTrack, TrackState
+from ByteTrack.yolox.tracker.kalman_filter import KalmanFilter
+from ByteTrack.yolox.tracker import matching
+from ByteTrack.yolox.tracker.basetrack import BaseTrack, TrackState
 
 class STrack(BaseTrack):
     shared_kalman = KalmanFilter()
